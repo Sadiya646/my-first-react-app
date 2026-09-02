@@ -3,6 +3,7 @@ import './App.css'
 import Batter from './Batter';
 import Counter from './Counter';
 import Users from './Users';
+import Todo from './Todo';
 
 const usersDataPromise= async()=>{
 const res=await fetch('https://jsonplaceholder.typicode.com/users');
@@ -28,6 +29,7 @@ function App() {
    <Suspense fallback={<p>Loading Users...</p>}>
      <Users usersDataPromise={usersDataPromise()}></Users>
    </Suspense>
+   <Todo task="complete the assignment" time="5:00 PM" />
   
     {/* <button onClick={handleClick}>Click Me</button>
     <button onClick={handleClick}>Click Me3</button>
